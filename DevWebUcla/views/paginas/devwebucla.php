@@ -5,9 +5,9 @@
     <div class="devwebucla__grid">
         <div <?php aos_animacion(); ?> class="devwebucla__imagen">
             <picture>
-                <source srcset="build/img/sobre_devwebucla.avif" type="image/avif">
-                <source srcset="build/img/sobre_devwebucla.webp" type="image/webp">
-                <img loading="lazy" width="200" height="300" src="build/img/sobre_devwebucla.jpg" alt="Imagen devwebucla">
+                <source srcset="build/img/sobre_devwebcamp.avif" type="image/avif">
+                <source srcset="build/img/sobre_devwebcamp.webp" type="image/webp">
+                <img loading="lazy" width="200" height="300" src="build/img/sobre_devwebucamp.jpg" alt="Imagen devwebucla">
             </picture>
         </div>
 
