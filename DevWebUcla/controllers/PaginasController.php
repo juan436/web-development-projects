@@ -57,15 +57,15 @@ class PaginasController {
     }
     public static function evento(Router $router) {
 
-        $router->render('paginas/devwebucla', [
-            'titulo' => 'Sobre DevWebUcla'
+        $router->render('paginas/devwebcamp', [
+            'titulo' => 'Sobre DevWebCamp'
         ]);
     }
     
     public static function paquetes(Router $router) {
 
         $router->render('paginas/paquetes', [
-            'titulo' => 'Paquetes DevWebUcla'
+            'titulo' => 'Paquetes DevWebCamp'
         ]);
     }
 
@@ -75,9 +75,6 @@ class PaginasController {
 
         $eventos_formateados = [];
         foreach($eventos as $evento) {
-
-            //Primero asignamos el objetos y luego lo agrumos en evento_formateados
-
             $evento->categoria = Categoria::find($evento->categoria_id);
             $evento->dia = Dia::find($evento->dia_id);
             $evento->hora = Hora::find($evento->hora_id);
@@ -99,6 +96,7 @@ class PaginasController {
                 $eventos_formateados['workshops_s'][] = $evento;
             }
         }
+
 
         $router->render('paginas/conferencias', [
             'titulo' => 'Conferencias & Workshops',

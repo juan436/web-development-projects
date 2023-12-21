@@ -118,7 +118,7 @@
         @include m.contenedor-md;
     }
 
-    // &__grafica {
-    //     @include m.contenedor-sm;
-    // }
+    &__grafica {
+        @include m.contenedor-sm;
+    }
 }
