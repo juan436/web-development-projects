@@ -1,4 +1,5 @@
 <?php
+ob_start();
 
 function debuguear($variable) : string {
     echo "<pre>";

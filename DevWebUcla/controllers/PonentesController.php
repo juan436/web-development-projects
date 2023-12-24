@@ -181,16 +181,19 @@ class PonentesController {
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
             if(!is_admin()) {
                 header('Location: /login');
+                exit;
             }
             
             $id = $_POST['id'];
             $ponente = Ponente::find($id);
             if(!isset($ponente) ) {
                 header('Location: /admin/ponentes');
+                exit;
             }
             $resultado = $ponente->eliminar();
             if($resultado) {
                 header('Location: /admin/ponentes');
+                exit;
             }
         }
 
