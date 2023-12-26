@@ -1,5 +1,5 @@
 {
-    "name": "laura/07-app-salon",
+    "name": "juanvillegas/app-salon",
     "description": "PHP8, HTML, CSS, SASS, GULP, SQL",
     "type": "project",
     "autoload": {
@@ -12,8 +12,7 @@
     },
     "authors": [
         {
-            "name": "Laura Ortega",
-            "email": "54899954+Pancratzia@users.noreply.github.com"
+            "name": "Juan Villegas"
         }
     ],
     "require": {
