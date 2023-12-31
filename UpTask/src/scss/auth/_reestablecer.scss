@@ -1,0 +1,9 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.reestablecer{
+
+    @include m.authStyles(v.$azul);
+
+}

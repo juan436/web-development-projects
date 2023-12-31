@@ -1,0 +1,9 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.crear{
+
+    @include m.authStyles(v.$morado);
+
+}
