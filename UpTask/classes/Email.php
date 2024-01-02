@@ -14,7 +14,6 @@ class Email {
         $this->email = $email;
         $this->nombre = $nombre;
         $this->token = $token;
-
     }
 
     public function enviarConfirmacion() {
@@ -26,12 +25,13 @@ class Email {
         $mail->Port = $_ENV['EMAIL_PORT'];
         $mail->Username = $_ENV['EMAIL_USER'];
         $mail->Password = $_ENV['EMAIL_PASS'];
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
 
         $mail->setFrom('cuentas@uptask.com');
-        $mail->addAddress('cuentas@uptask.com', 'uptask.com');
+        $mail->addAddress($this->email, $this->nombre);
         $mail->Subject = 'Confirma tu Cuenta';
 
-        $mail->isHTML(TRUE);
+        $mail->isHTML(true);
         $mail->CharSet = 'UTF-8';
 
         $contenido = '<html>';
@@ -42,11 +42,8 @@ class Email {
 
         $mail->Body = $contenido;
 
-
-        // Enviar el email
         $mail->send();
     }
-
 
     public function enviarInstrucciones() {
 
@@ -57,12 +54,13 @@ class Email {
         $mail->Port = $_ENV['EMAIL_PORT'];
         $mail->Username = $_ENV['EMAIL_USER'];
         $mail->Password = $_ENV['EMAIL_PASS'];
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
 
         $mail->setFrom('cuentas@uptask.com');
-        $mail->addAddress('cuentas@uptask.com', 'uptask.com');
+        $mail->addAddress($this->email, $this->nombre);
         $mail->Subject = 'Reestablece tu Password';
 
-        $mail->isHTML(TRUE);
+        $mail->isHTML(true);
         $mail->CharSet = 'UTF-8';
 
         $contenido = '<html>';
@@ -73,8 +71,6 @@ class Email {
 
         $mail->Body = $contenido;
 
-
-        // Enviar el email
         $mail->send();
     }
 }
