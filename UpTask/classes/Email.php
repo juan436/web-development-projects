@@ -25,9 +25,8 @@ class Email {
         $mail->Port = $_ENV['EMAIL_PORT'];
         $mail->Username = $_ENV['EMAIL_USER'];
         $mail->Password = $_ENV['EMAIL_PASS'];
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
 
-        $mail->setFrom('cuentas@uptask.com');
+        $mail->setFrom('uptask@jvcx.com');
         $mail->addAddress($this->email, $this->nombre);
         $mail->Subject = 'Confirma tu Cuenta';
 
@@ -54,9 +53,8 @@ class Email {
         $mail->Port = $_ENV['EMAIL_PORT'];
         $mail->Username = $_ENV['EMAIL_USER'];
         $mail->Password = $_ENV['EMAIL_PASS'];
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
 
-        $mail->setFrom('cuentas@uptask.com');
+        $mail->setFrom('uptask@jvcx.com');
         $mail->addAddress($this->email, $this->nombre);
         $mail->Subject = 'Reestablece tu Password';
 
